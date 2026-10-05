@@ -69,6 +69,7 @@ h1 em, h2 em { color: var(--leaf); font-weight: 500; }
 .hero__note { position: absolute; right: 32px; bottom: 30px; color: rgb(255 255 255 / 75%); font-size: 9px; font-weight: 700; letter-spacing: 1.6px; writing-mode: vertical-rl; }
 
 .section { padding-block: 112px; }
+.calculator { margin-bottom: 64px; }
 .section-kicker { display: flex; align-items: center; gap: 13px; color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: 1.3px; text-transform: uppercase; }
 .section-kicker > span:first-child { color: var(--orange); }
 .section-kicker__line { width: 34px; height: 1px; background: #d9cba9; }
