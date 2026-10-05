@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Simple ideas for understanding energy and making thoughtful choices at home.">
+		<title>Appliance Energy Consumption </title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+		<link rel="icon" href="images/PowerIcon.png" type="image/png">
+		<link rel="stylesheet" href="css/styles.css">
+		<script src="js/scripts.js" defer></script>
+	</head>
+	<body>
+		<header class="hero" id="top">
+			<img class="hero__image" src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=2200&q=85" alt="Solar panels catching the afternoon sun">
+			<div class="hero__shade"></div>
+
+			<nav class="nav page-width" aria-label="Main navigation">
+				<a class="brand" href="#top" aria-label="Current home">
+					<img class="brand__icon" src="images/PowerIcon.png" alt="">
+					<span>Australian Energy <span class="brand__period"></span></span>
+				</a>
+				<button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">
+					<span></span><span></span>
+				</button>
+				<div class="nav__links" id="nav-links">
+                    <a href="index.html">Home</a>
+					<a href="televisions.html">Televisions</a>
+					<a class="nav__contact" href="aboutus.html">About Us <span aria-hidden="true">↗</span></a>
+				</div>
+			</nav>
+
+			<div class="hero__content page-width">
+				<h1>Appliance Energy Consumption</h1>
+				<p class="hero__intro">A simple website for COS30045 Data Visualisation</p>
+				<a class="button button--light" href="usage.html">Usage Calculator <span aria-hidden="true">↓</span></a>
+			</div>
+
+			<div class="hero__note" aria-hidden="true">ENERGY, MADE A LITTLE CLEARER</div>
+		</header>
+
+		<main>
+			<section class="faq section page-width" id="faq">
+				<div class="section-kicker"><span>01</span><span class="section-kicker__line"></span><span>Frequently asked questions</span></div>
+				<div class="faq__heading">
+					<h2>Questions and Answers</h2>
+				</div>
+				<div class="faq__list">
+					<article class="faq__item">
+						<h3><button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-answer-1">Question 1</button></h3>
+						<div class="faq__answer" id="faq-answer-1" hidden><p>Placeholder answer</p></div>
+					</article>
+					<article class="faq__item">
+						<h3><button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-answer-2">Question 2</button></h3>
+						<div class="faq__answer" id="faq-answer-2" hidden><p>Placeholder answer</p></div>
+					</article>
+					<article class="faq__item">
+						<h3><button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-answer-3">Question 3</button></h3>
+						<div class="faq__answer" id="faq-answer-3" hidden><p>Placeholder answer</p></div>
+					</article>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer page-width">
+			<a class="brand brand--footer" href="#top"><img class="brand__icon" src="images/PowerIcon.png" alt=""><span>Australian Energy<span class="brand__period">.</span></span></a>
+			<p>COS30045 Data Visualisation</p>
+			<span>© <span id="year"></span> Goh Jin Wei</span>
+		</footer>
+	</body>
+</html>
