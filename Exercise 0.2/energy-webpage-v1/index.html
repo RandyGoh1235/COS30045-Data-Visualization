@@ -35,15 +35,53 @@
 			<div class="hero__content page-width">
 				<h1>Appliance Energy Consumption</h1>
 				<p class="hero__intro">A simple website for COS30045 Data Visualisation</p>
-				<a class="button button--light" href="usage.html">Usage Calculator <span aria-hidden="true">↓</span></a>
 			</div>
 
 			<div class="hero__note" aria-hidden="true">ENERGY, MADE A LITTLE CLEARER</div>
 		</header>
 
 		<main>
+			<section class="calculator section page-width" id="calculator" aria-labelledby="calculator-title">
+				<div class="section-kicker"><span>01</span><span class="section-kicker__line"></span><span>Estimate your usage</span></div>
+				<div class="calculator__heading">
+					<h2 id="calculator-title">What does it <em>cost to run?</em></h2>
+					<p>Enter an appliance’s power, average daily use, and your electricity rate. Estimates update as you type.</p>
+				</div>
+
+				<div class="calculator__layout">
+					<form class="calculator__form" id="calculator-form" novalidate>
+						<div class="calculator__field">
+							<label for="power">Appliance power (watts)</label>
+							<input id="power" name="power" type="number" min="1" step="any" value="1000" required inputmode="decimal">
+						</div>
+						<div class="calculator__field">
+							<label for="hours">Average use per day (hours)</label>
+							<input id="hours" name="hours" type="number" min="0" max="24" step="any" value="3" required inputmode="decimal">
+						</div>
+						<div class="calculator__field">
+							<label for="price">Electricity price (cents per kWh)</label>
+							<input id="price" name="price" type="number" min="0" step="any" value="30" required inputmode="decimal">
+						</div>
+						<p class="calculator__feedback" id="calculator-feedback" role="status" aria-live="polite">Estimates update automatically as you change the values.</p>
+						<button class="calculator__button" type="submit">Update estimate <span aria-hidden="true">→</span></button>
+					</form>
+
+					<section class="calculator__results" aria-label="Estimated energy and cost">
+						<h3>Your estimate</h3>
+						<p>Based on 30 days per month and 365 days per year.</p>
+						<dl>
+							<div><dt>Daily energy</dt><dd><output id="daily-energy">-- kWh</output></dd></div>
+							<div><dt>Monthly energy</dt><dd><output id="monthly-energy">-- kWh</output></dd></div>
+							<div><dt>Yearly energy</dt><dd><output id="yearly-energy">-- kWh</output></dd></div>
+							<div><dt>Estimated monthly cost</dt><dd><output id="monthly-cost">--</output></dd></div>
+							<div><dt>Estimated yearly cost</dt><dd><output id="yearly-cost">--</output></dd></div>
+						</dl>
+					</section>
+				</div>
+			</section>
+
 			<section class="faq section page-width" id="faq">
-				<div class="section-kicker"><span>01</span><span class="section-kicker__line"></span><span>Frequently asked questions</span></div>
+				<div class="section-kicker"><span>02</span><span class="section-kicker__line"></span><span>Frequently asked questions</span></div>
 				<div class="faq__heading">
 					<h2>Questions and Answers</h2>
 				</div>
