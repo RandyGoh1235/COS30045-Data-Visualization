@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Simple ideas for understanding energy and making thoughtful choices at home.">
+		<title>Appliance Energy Consumption </title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+		<link rel="icon" href="images/PowerIcon.png" type="image/png">
+		<link rel="stylesheet" href="css/styles.css">
+		<script src="js/scripts.js" defer></script>
+	</head>
+	<body>
+		<header class="hero" id="top">
+			<img class="hero__image" src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=2200&q=85" alt="Solar panels catching the afternoon sun">
+			<div class="hero__shade"></div>
+
+			<nav class="nav page-width" aria-label="Main navigation">
+				<a class="brand" href="#top" aria-label="Current home">
+					<img class="brand__icon" src="images/PowerIcon.png" alt="">
+					<span>Australian Energy <span class="brand__period"></span></span>
+				</a>
+				<button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">
+					<span></span><span></span>
+				</button>
+				<div class="nav__links" id="nav-links">
+                    <a href="index.html">Home</a>
+					<a href="televisions.html">Televisions</a>
+					<a class="nav__contact" href="aboutus.html">About Us <span aria-hidden="true">↗</span></a>
+				</div>
+			</nav>
+
+			<div class="hero__content page-width">
+				<h1>Appliance Energy Consumption</h1>
+				<p class="hero__intro">A simple website for COS30045 Data Visualisation</p>
+			</div>
+
+			<div class="hero__note" aria-hidden="true">ENERGY, MADE A LITTLE CLEARER</div>
+		</header>
+
+		<main>
+			<section class="calculator section page-width" id="calculator" aria-labelledby="calculator-title">
+				<div class="section-kicker"><span>01</span><span class="section-kicker__line"></span><span>House SVG</span></div>
+				<figure class="calculator__illustration">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="house-garden-title house-garden-description">
+						<title id="house-garden-title">House</title>
+						<defs>
+							<linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+								<stop offset="0%" stop-color="#70c5ff" />
+								<stop offset="70%" stop-color="#bfe3ff" />
+								<stop offset="100%" stop-color="#eaf6ff" />
+							</linearGradient>
+							<linearGradient id="wallGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+								<stop offset="0%" stop-color="#fdfbf7" />
+								<stop offset="100%" stop-color="#eedfc6" />
+							</linearGradient>
+						</defs>
+						<rect x="0" y="0" width="800" height="420" fill="url(#skyGrad)" />
+						<rect x="0" y="420" width="800" height="180" fill="#4fa646" />
+						<circle cx="120" cy="100" r="45" fill="#ffd13b" stroke="#fca311" stroke-width="4" />
+						<g stroke="#fca311" stroke-width="4" stroke-linecap="round">
+							<line x1="120" y1="40" x2="120" y2="20" />
+							<line x1="120" y1="160" x2="120" y2="180" />
+							<line x1="60" y1="100" x2="40" y2="100" />
+							<line x1="180" y1="100" x2="200" y2="100" />
+							<line x1="78" y1="58" x2="64" y2="44" />
+							<line x1="162" y1="142" x2="176" y2="156" />
+							<line x1="78" y1="142" x2="64" y2="156" />
+							<line x1="162" y1="58" x2="176" y2="44" />
+						</g>
+						<path d="M 620,110 a 25,25 0 0,1 30,-15 a 35,35 0 0,1 60,10 a 25,25 0 0,1 25,25 a 20,20 0 0,1 -20,20 l -90,0 a 20,20 0 0,1 -5,-40 z" fill="#ffffff" opacity="0.95" />
+						<rect x="360" y="160" width="35" height="70" fill="#a44230" stroke="#772b1e" stroke-width="2" />
+						<path d="M 375,155 Q 365,130 380,115 T 375,80" fill="none" stroke="#e0e0e0" stroke-width="5" stroke-linecap="round" opacity="0.8" />
+						<rect x="330" y="250" width="280" height="190" fill="url(#wallGrad)" stroke="#b59a79" stroke-width="3" rx="4" />
+						<polygon points="310,250 470,140 630,250" fill="#c0392b" stroke="#962d22" stroke-width="3" />
+						<circle cx="470" cy="205" r="20" fill="#e1f5fe" stroke="#ffffff" stroke-width="3" />
+						<line x1="470" y1="185" x2="470" y2="225" stroke="#ffffff" stroke-width="2" />
+						<line x1="450" y1="205" x2="490" y2="205" stroke="#ffffff" stroke-width="2" />
+						<rect x="440" y="330" width="55" height="110" fill="#78350f" stroke="#451a03" stroke-width="2" rx="3" />
+						<circle cx="485" cy="385" r="4" fill="#fbbf24" />
+						<rect x="355" y="290" width="60" height="60" fill="#bae6fd" stroke="#ffffff" stroke-width="4" />
+						<line x1="385" y1="290" x2="385" y2="350" stroke="#ffffff" stroke-width="2" />
+						<line x1="355" y1="320" x2="415" y2="320" stroke="#ffffff" stroke-width="2" />
+						<rect x="525" y="290" width="60" height="60" fill="#bae6fd" stroke="#ffffff" stroke-width="4" />
+						<line x1="555" y1="290" x2="555" y2="350" stroke="#ffffff" stroke-width="2" />
+						<line x1="525" y1="320" x2="585" y2="320" stroke="#ffffff" stroke-width="2" />
+						<path d="M 440,440 C 420,490 350,520 330,600 L 410,600 C 430,530 480,500 495,440 Z" fill="#d6c7a1" stroke="#b8a67c" stroke-width="2" />
+						<ellipse cx="445" cy="460" rx="14" ry="6" fill="#a8a29e" />
+						<ellipse cx="420" cy="495" rx="16" ry="7" fill="#9ca3af" />
+						<ellipse cx="385" cy="535" rx="18" ry="8" fill="#a8a29e" />
+						<ellipse cx="365" cy="575" rx="20" ry="9" fill="#9ca3af" />
+						<path d="M 160,450 Q 170,360 150,300 Q 185,340 190,450 Z" fill="#6d4c41" />
+						<circle cx="140" cy="280" r="50" fill="#2d6a4f" opacity="0.9" />
+						<circle cx="200" cy="270" r="55" fill="#40916c" opacity="0.95" />
+						<circle cx="165" cy="230" r="48" fill="#52b788" />
+						<ellipse cx="320" cy="435" rx="35" ry="20" fill="#2d6a4f" />
+						<ellipse cx="615" cy="435" rx="40" ry="22" fill="#2d6a4f" />
+						<ellipse cx="635" cy="440" rx="28" ry="16" fill="#52b788" />
+						<line x1="230" y1="465" x2="230" y2="435" stroke="#2d6a4f" stroke-width="3" />
+						<line x1="255" y1="475" x2="255" y2="445" stroke="#2d6a4f" stroke-width="3" />
+						<line x1="280" y1="470" x2="280" y2="440" stroke="#2d6a4f" stroke-width="3" />
+						<circle cx="230" cy="435" r="8" fill="#e11d48" />
+						<circle cx="255" cy="445" r="8" fill="#fbbf24" />
+						<circle cx="280" cy="440" r="8" fill="#a855f7" />
+						<polyline points="40,460 40,400 48,390 56,400 56,460 66,460 66,400 74,390 82,400 82,460 92,460 92,400 100,390 108,400 108,460 118,460 118,400 126,390 134,400 134,460" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" />
+						<line x1="30" y1="415" x2="145" y2="415" stroke="#e2e8f0" stroke-width="4" />
+						<line x1="30" y1="445" x2="145" y2="445" stroke="#e2e8f0" stroke-width="4" />
+						<rect x="452" y="308" width="30" height="15" fill="#fef3c7" stroke="#b45309" stroke-width="1" rx="2" />
+						<text x="467" y="320" font-family="sans-serif" font-size="10" font-weight="bold" fill="#78350f" text-anchor="middle">42</text>
+						<text x="400" y="50" font-family="Georgia, serif" font-size="28" font-weight="bold" fill="#1e3a8a" text-anchor="middle" letter-spacing="1">House</text>
+						<line x1="750" y1="400" x2="750" y2="40" stroke="#1e3a8a" stroke-width="2" /> <!--Adds vertical line at the right side-->
+					</svg>
+				</figure>
+				<div class="section-kicker"><span>02</span><span class="section-kicker__line"></span><span>Estimate your usage</span></div>
+				<div class="calculator__heading">
+					<h2 id="calculator-title">What does it <em>cost to run?</em></h2>
+					<p>Enter an appliance’s power, average daily use, and your electricity rate. Estimates update as you type.</p>
+				</div>
+
+				<div class="calculator__layout">
+					<form class="calculator__form" id="calculator-form" novalidate>
+						<div class="calculator__field">
+							<label for="power">Appliance power (watts)</label>
+							<input id="power" name="power" type="number" min="1" step="any" value="1000" required inputmode="decimal">
+						</div>
+						<div class="calculator__field">
+							<label for="hours">Average use per day (hours)</label>
+							<input id="hours" name="hours" type="number" min="0" max="24" step="any" value="3" required inputmode="decimal">
+						</div>
+						<div class="calculator__field">
+							<label for="price">Electricity price (cents per kWh)</label>
+							<input id="price" name="price" type="number" min="0" step="any" value="30" required inputmode="decimal">
+						</div>
+						<p class="calculator__feedback" id="calculator-feedback" role="status" aria-live="polite">Estimates update automatically as you change the values.</p>
+						<button class="calculator__button" type="submit">Update estimate <span aria-hidden="true">→</span></button>
+					</form>
+
+					<section class="calculator__results" aria-label="Estimated energy and cost">
+						<h3>Your estimate</h3>
+						<p>Based on 30 days per month and 365 days per year.</p>
+						<dl>
+							<div><dt>Daily energy</dt><dd><output id="daily-energy">-- kWh</output></dd></div>
+							<div><dt>Monthly energy</dt><dd><output id="monthly-energy">-- kWh</output></dd></div>
+							<div><dt>Yearly energy</dt><dd><output id="yearly-energy">-- kWh</output></dd></div>
+							<div><dt>Estimated monthly cost</dt><dd><output id="monthly-cost">--</output></dd></div>
+							<div><dt>Estimated yearly cost</dt><dd><output id="yearly-cost">--</output></dd></div>
+						</dl>
+					</section>
+				</div>
+			</section>
+
+			<section class="faq section page-width" id="faq">
+				<div class="section-kicker"><span>03</span><span class="section-kicker__line"></span><span>Frequently asked questions</span></div>
+				<div class="faq__heading">
+					<h2>Questions and Answers</h2>
+				</div>
+				<div class="faq__list">
+					<article class="faq__item">
+						<h3><button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-answer-1">Question 1</button></h3>
+						<div class="faq__answer" id="faq-answer-1" hidden><p>Placeholder answer</p></div>
+					</article>
+					<article class="faq__item">
+						<h3><button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-answer-2">Question 2</button></h3>
+						<div class="faq__answer" id="faq-answer-2" hidden><p>Placeholder answer</p></div>
+					</article>
+					<article class="faq__item">
+						<h3><button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-answer-3">Question 3</button></h3>
+						<div class="faq__answer" id="faq-answer-3" hidden><p>Placeholder answer</p></div>
+					</article>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer page-width">
+			<a class="brand brand--footer" href="#top"><img class="brand__icon" src="images/PowerIcon.png" alt=""><span>Australian Energy<span class="brand__period">.</span></span></a>
+			<p>COS30045 Data Visualisation</p>
+			<span>© <span id="year"></span> Goh Jin Wei</span>
+		</footer>
+	</body>
+</html>
