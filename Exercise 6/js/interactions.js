@@ -49,6 +49,6 @@ const populateFilters = (data) => {
 		});
 };
 
-const createTooltip = () => {};
+const createTooltip = (data) => {};
 
 const handleMouseEvents = () => {};
