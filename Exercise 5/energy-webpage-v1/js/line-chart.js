@@ -70,3 +70,20 @@ const drawLineChart = (data) => {
 		.attr("cy", (d) => yScale(d.averagePrice))
 		.attr("fill", "green");
 };
+
+d3.csv("data/Data_exercise 5.3.csv", (d) => ({
+	screenSizeCategory: d.Screensize_Category,
+	count: +d.Count
+})).then((data) => {
+	console.log(data);
+	console.log("Data types:", typeof data[0]?.screenSizeCategory, typeof data[0]?.count);
+	drawDonutChart(data);
+}).catch((error) => {
+	console.error("Unable to load data/Data_exercise 5.3.csv:", error);
+});
+
+const drawDonutChart = (data) => {
+	const width = 1000;
+	const height = 500;
+	const radius = Math.min(width, height) / 2 - 20;
+};
