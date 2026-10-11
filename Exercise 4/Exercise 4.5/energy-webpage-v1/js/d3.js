@@ -11,6 +11,9 @@ svg.append("rect")
 	.attr("fill", "blue");
 
 const drawBarChart = (data) => {
+	const barHeight = 20;
+	const barSpacing = 5;
+
 	svg
 		.selectAll("rect")
 		.data(data)
@@ -18,7 +21,12 @@ const drawBarChart = (data) => {
 		.attr("class", (d) => {
 			console.log(d);
 			return `bar bar-${d.count}`;
-		});
+		})
+		.attr("x", 0)
+		.attr("y", (d, i) => i * (barHeight + barSpacing))
+		.attr("width", (d) => d.count)
+		.attr("height", barHeight)
+		.attr("fill", "blue");
 };
 
 d3.csv("data/tvBrandCount.csv", (d) => {
