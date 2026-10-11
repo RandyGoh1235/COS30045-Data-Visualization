@@ -50,4 +50,13 @@ const drawLineChart = (data) => {
 		.attr("x", -innerHeight / 2)
 		.attr("y", -margin.left + 15)
 		.attr("text-anchor", "middle");
+
+	innerChart
+		.selectAll("circle")
+		.data(data)
+		.join("circle")
+		.attr("r", 4)
+		.attr("cx", (d) => xScale(d.year))
+		.attr("cy", (d) => yScale(d.averagePrice))
+		.attr("fill", "green");
 };
