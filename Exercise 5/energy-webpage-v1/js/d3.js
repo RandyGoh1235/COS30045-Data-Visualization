@@ -25,25 +25,43 @@ const drawBarChart = (data) => {
 		.attr("viewBox", `0 0 ${width} ${height}`)
 		.style("border", "1px solid black");
 	const innerChart = svg.append("g")
-		.attr("transform", `translate(${margin.left},${margin.top})`);
+		.attr("transform", `translate(${margin.left}, ${margin.top})`);
 
-	const xScale = d3.scaleLinear()
-		.domain([0, d3.max(data, (d) => d.energyConsumption)])
-		.range([0, innerWidth]);
-
-	const yScale = d3.scaleBand()
+	const xScale = d3.scaleBand()
 		.domain(data.map((d) => d.screenTech))
-		.range([0, innerHeight])
+		.range([0, innerWidth])
 		.padding(0.1);
+	const yScale = d3.scaleLinear()
+		.domain([0, d3.max(data, (d) => d.energyConsumption)])
+		.range([innerHeight, 0]);
+	const bottomAxis = d3.axisBottom(xScale);
+	const leftAxis = d3.axisLeft(yScale);
 
 	innerChart
-		.selectAll("rect.bar")
+		.append("g")
+		.attr("transform", `translate(0,${innerHeight})`)
+		.call(bottomAxis);
+
+	innerChart
+		.append("g")
+		.call(leftAxis);
+
+	innerChart
+		.append("text")
+		.text("Energy Consumption (kWh)")
+		.attr("transform", "rotate(-90)")
+		.attr("x", -innerHeight / 2)
+		.attr("y", -margin.left + 15)
+		.attr("text-anchor", "middle");
+
+	innerChart
+		.selectAll(".bar")
 		.data(data)
 		.join("rect")
 		.attr("class", "bar")
-		.attr("width", (d) => xScale(d.energyConsumption))
-		.attr("height", yScale.bandwidth())
-		.attr("fill", "blue")
-		.attr("x", 0)
-		.attr("y", (d) => yScale(d.screenTech));
+		.attr("width", xScale.bandwidth())
+		.attr("height", (d) => innerHeight - yScale(d.energyConsumption))
+		.attr("fill", "green")
+		.attr("x", (d) => xScale(d.screenTech))
+		.attr("y", (d) => yScale(d.energyConsumption));
 };
