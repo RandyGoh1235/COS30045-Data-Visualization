@@ -74,7 +74,7 @@ h1 em, h2 em { color: var(--leaf); font-weight: 500; }
 .calculator__illustration svg { display: block; width: 100%; height: auto; }
 .responsive-svg-container { margin-right: auto; margin-left: auto; width: 100%; max-width: 1200px; }
 #line-chart:empty { aspect-ratio: 2; }
-#new-chart:empty { aspect-ratio: 2; }
+#donut-chart:empty { aspect-ratio: 2; }
 .section-kicker { display: flex; align-items: center; gap: 13px; color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: 1.3px; text-transform: uppercase; }
 .section-kicker > span:first-child { color: var(--orange); }
 .section-kicker__line { width: 34px; height: 1px; background: #d9cba9; }
