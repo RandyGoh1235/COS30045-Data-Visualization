@@ -6,8 +6,8 @@ const innerWidth = width - margin.left - margin.right;
 const innerHeight = height - margin.top - margin.bottom;
 
 let innerChartS;
-const tooltipWidth = 65;
-const tooltipHeight = 32;
+const tooltipWidth = 180;
+const tooltipHeight = 54;
 
 const barColor = "#606464";
 const bodyBackgroundColor = "#fffaf0";

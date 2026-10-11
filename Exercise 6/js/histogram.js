@@ -24,9 +24,10 @@ const drawHistogram = (data) => {
 		.attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 	innerChart
-		.selectAll("rect")
+		.selectAll(".histogram-bar")
 		.data(bins)
 		.join("rect")
+		.attr("class", "histogram-bar")
 		.attr("x", (d) => xScale(d.x0))
 		.attr("y", (d) => yScale(d.length))
 		.attr("width", (d) => xScale(d.x1) - xScale(d.x0))
