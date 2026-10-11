@@ -14,7 +14,11 @@ const drawBarChart = (data) => {
 	svg
 		.selectAll("rect")
 		.data(data)
-		.join("rect");
+		.join("rect")
+		.attr("class", (d) => {
+			console.log(d);
+			return `bar bar-${d.count}`;
+		});
 };
 
 d3.csv("data/tvBrandCount.csv", (d) => {
