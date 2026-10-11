@@ -16,5 +16,6 @@ d3.csv("data/tvBrandCount.csv", (d) => {
 		count: +d.count
 	};
 }).then((data) => {
+	data.sort((a, b) => b.count - a.count);
 	console.log(data);
 });
