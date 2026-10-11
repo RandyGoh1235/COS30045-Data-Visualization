@@ -27,7 +27,7 @@ const drawBarChart = (data) => {
 		})
 		.attr("x", 0)
 		.attr("y", (d, i) => i * (barHeight + barSpacing))
-		.attr("width", (d) => d.count)
+		.attr("width", (d) => xScale(d.count))
 		.attr("height", barHeight)
 		.attr("fill", "blue");
 };
