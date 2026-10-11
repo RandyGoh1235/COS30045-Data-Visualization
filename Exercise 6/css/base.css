@@ -1,0 +1,129 @@
+:root {
+	color-scheme: light;
+	--color-ink: #263238;
+	--color-muted: #607078;
+	--color-primary: #155e75;
+	--color-primary-dark: #0c3f50;
+	--color-accent: #e9a23b;
+	--color-paper: #f4f7f7;
+	--color-surface: #ffffff;
+	--content-width: 1100px;
+	font-family: "Segoe UI", Arial, sans-serif;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	min-width: 320px;
+	scroll-behavior: smooth;
+}
+
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	margin: 0;
+	color: var(--color-ink);
+	background: var(--color-paper);
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+header {
+	padding: clamp(2rem, 6vw, 4.5rem) 1.5rem;
+	color: var(--color-surface);
+	background: var(--color-primary-dark);
+	border-bottom: 5px solid var(--color-accent);
+}
+
+header h1 {
+	width: min(100%, var(--content-width));
+	margin: 0 auto;
+	font-size: clamp(2rem, 5vw, 3.25rem);
+	line-height: 1.1;
+}
+
+main {
+	width: min(calc(100% - 3rem), var(--content-width));
+	flex: 1;
+	margin: 0 auto;
+	padding-block: clamp(2rem, 5vw, 4rem);
+}
+
+main > section {
+	margin-bottom: 2.5rem;
+	padding: clamp(1.25rem, 4vw, 2.5rem);
+	background: var(--color-surface);
+	border: 1px solid #d9e2e3;
+	border-radius: 0.75rem;
+	box-shadow: 0 0.5rem 1.5rem rgb(24 55 61 / 6%);
+}
+
+h2,
+h3 {
+	color: var(--color-primary-dark);
+	line-height: 1.25;
+}
+
+h2 {
+	margin: 0 0 0.75rem;
+	font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+h3 {
+	margin: 0 0 0.5rem;
+	font-size: 1.2rem;
+}
+
+p {
+	margin: 0 0 1rem;
+}
+
+a {
+	color: var(--color-primary);
+	text-decoration-thickness: 0.08em;
+	text-underline-offset: 0.18em;
+}
+
+a:hover {
+	color: var(--color-primary-dark);
+}
+
+a:focus-visible {
+	border-radius: 2px;
+	outline: 3px solid var(--color-accent);
+	outline-offset: 3px;
+}
+
+footer {
+	padding: 1.25rem 1.5rem;
+	color: var(--color-surface);
+	background: var(--color-primary-dark);
+	text-align: center;
+}
+
+footer p {
+	margin: 0;
+	font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+	main {
+		width: min(calc(100% - 1.5rem), var(--content-width));
+	}
+
+	main > section {
+		padding: 1.25rem;
+		border-radius: 0.5rem;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
