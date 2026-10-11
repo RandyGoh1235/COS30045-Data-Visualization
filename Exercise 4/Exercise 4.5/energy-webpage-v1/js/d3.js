@@ -10,7 +10,12 @@ svg.append("rect")
 	.attr("height", 16)
 	.attr("fill", "blue");
 
-const drawBarChart = (data) => {};
+const drawBarChart = (data) => {
+	svg
+		.selectAll("rect")
+		.data(data)
+		.join("rect");
+};
 
 d3.csv("data/tvBrandCount.csv", (d) => {
 	return {
