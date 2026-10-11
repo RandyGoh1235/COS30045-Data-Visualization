@@ -8,6 +8,9 @@ d3.csv("data/Ex6_TVdata_withStar.csv", (d) => ({
 		console.log(data);
 		drawHistogram(data);
 		populateFilters(data);
+		drawScatterplot(data);
+		createTooltip();
+		handleMouseEvents();
 	})
 	.catch((error) => {
 		console.error("Unable to load data/Ex6_TVdata_withStar.csv:", error);

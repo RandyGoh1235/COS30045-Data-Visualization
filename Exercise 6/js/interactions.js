@@ -48,3 +48,7 @@ const populateFilters = (data) => {
 			console.log("Clicked filter data:", d);
 		});
 };
+
+const createTooltip = () => {};
+
+const handleMouseEvents = () => {};

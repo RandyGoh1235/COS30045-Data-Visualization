@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>TV Energy Consumption Histogram</title>
+		<title>TV Energy Consumption Visualisations</title>
 		<link rel="stylesheet" href="css/base.css">
 		<link rel="stylesheet" href="css/visualisation.css">
 	</head>
@@ -18,6 +18,11 @@
 				<p>TVs vary considerably in energy consumption.</p>
 				<div id="filters_screen"></div>
 				<div id="histogram" class="responsive-svg-container"></div>
+			</section>
+
+			<section aria-labelledby="scatterplot-title">
+				<h2 id="scatterplot-title">Energy Consumption and Star Rating</h2>
+				<div id="scatterplot" class="responsive-svg-container"></div>
 			</section>
 
 			<section class="body" aria-labelledby="data-source-title">
@@ -40,5 +45,6 @@
 		<script src="js/shared-constants.js"></script>
 		<script src="js/interactions.js"></script>
 		<script src="js/histogram.js"></script>
+		<script src="js/scatterplot.js"></script>
 	</body>
 </html>
