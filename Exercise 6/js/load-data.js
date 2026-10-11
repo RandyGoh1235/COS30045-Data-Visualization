@@ -1,4 +1,9 @@
-d3.csv("data/Ex6_TVdata_withStar.csv")
+d3.csv("data/Ex6_TVdata_withStar.csv", (d) => ({
+	...d,
+	screenSize: +d.screenSize,
+	star: +d.star,
+	energyConsumption: +d.energyConsumption
+}))
 	.then((data) => {
 		console.log(data);
 		drawHistogram(data);
