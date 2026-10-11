@@ -21,4 +21,33 @@ const drawLineChart = (data) => {
 		.style("border", "1px solid black");
 	const innerChart = svg.append("g")
 		.attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+	const xScale = d3.scaleLinear()
+		.domain(d3.extent(data, (d) => d.year))
+		.range([0, innerWidth]);
+
+	const yScale = d3.scaleLinear()
+		.domain([0, d3.max(data, (d) => d.averagePrice)])
+		.range([innerHeight, 0]);
+
+	const bottomAxis = d3.axisBottom(xScale)
+		.tickFormat(d3.format("d"));
+	const leftAxis = d3.axisLeft(yScale);
+
+	innerChart
+		.append("g")
+		.attr("transform", `translate(0,${innerHeight})`)
+		.call(bottomAxis);
+
+	innerChart
+		.append("g")
+		.call(leftAxis);
+
+	innerChart
+		.append("text")
+		.text("Average Spot Price ($/MWh)")
+		.attr("transform", "rotate(-90)")
+		.attr("x", -innerHeight / 2)
+		.attr("y", -margin.left + 15)
+		.attr("text-anchor", "middle");
 };
