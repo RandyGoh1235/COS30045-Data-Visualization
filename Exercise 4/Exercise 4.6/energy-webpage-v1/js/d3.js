@@ -13,6 +13,9 @@ svg.append("rect")
 const drawBarChart = (data) => {
 	const barHeight = 20;
 	const barSpacing = 5;
+	const xScale = d3.scaleLinear()
+		.domain([0, 1200])
+		.range([0, 400]);
 
 	svg
 		.selectAll("rect")
