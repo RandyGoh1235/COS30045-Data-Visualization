@@ -11,11 +11,12 @@ svg.append("rect")
 	.attr("fill", "blue");
 
 const drawBarChart = (data) => {
-	const barHeight = 20;
-	const barSpacing = 5;
 	const xScale = d3.scaleLinear()
 		.domain([0, 1200])
 		.range([0, 400]);
+	const yScale = d3.scaleBand()
+		.domain(data.map((d) => d.brand))
+		.range([0, 1600]);
 
 	svg
 		.selectAll("rect")
@@ -26,9 +27,9 @@ const drawBarChart = (data) => {
 			return `bar bar-${d.count}`;
 		})
 		.attr("x", 0)
-		.attr("y", (d, i) => i * (barHeight + barSpacing))
+		.attr("y", (d) => yScale(d.brand))
 		.attr("width", (d) => xScale(d.count))
-		.attr("height", barHeight)
+		.attr("height", yScale.bandwidth())
 		.attr("fill", "blue");
 };
 
