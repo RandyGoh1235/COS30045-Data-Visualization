@@ -30,9 +30,19 @@ const drawLineChart = (data) => {
 		.domain([0, d3.max(data, (d) => d.averagePrice)])
 		.range([innerHeight, 0]);
 
+	const lineGenerator = d3.line()
+		.x((d) => xScale(d.year))
+		.y((d) => yScale(d.averagePrice));
+
 	const bottomAxis = d3.axisBottom(xScale)
 		.tickFormat(d3.format("d"));
 	const leftAxis = d3.axisLeft(yScale);
+
+	innerChart
+		.append("path")
+		.attr("d", lineGenerator(data))
+		.attr("fill", "none")
+		.attr("stroke", "green");
 
 	innerChart
 		.append("g")
