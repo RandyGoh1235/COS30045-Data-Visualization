@@ -17,5 +17,5 @@ d3.csv("data/tvBrandCount.csv", (d) => {
 	};
 }).then((data) => {
 	data.sort((a, b) => b.count - a.count);
-	console.log(data);
+	drawBarChart(data);
 });
