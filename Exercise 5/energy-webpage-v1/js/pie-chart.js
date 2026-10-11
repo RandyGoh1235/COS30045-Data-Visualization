@@ -28,4 +28,22 @@ const drawDonutChart = (data) => {
 	const arcGenerator = d3.arc()
 		.innerRadius(radius * 0.6)
 		.outerRadius(radius * 1);
+
+	innerChart
+		.selectAll("path")
+		.data(pie(data))
+		.join("path")
+		.attr("d", arcGenerator)
+		.attr("fill", (d) => color(d.data.screenSizeCategory))
+		.attr("stroke", "white")
+		.attr("stroke-width", 2);
+
+	innerChart
+		.selectAll("text")
+		.data(pie(data))
+		.join("text")
+		.attr("transform", (d) => `translate(${arcGenerator.centroid(d)})`)
+		.attr("text-anchor", "middle")
+		.attr("dominant-baseline", "central")
+		.text((d) => d.data.screenSizeCategory);
 };
